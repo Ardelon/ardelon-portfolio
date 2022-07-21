@@ -1,0 +1,88 @@
+$width: 100px;
+$height: 300px;
+$animation-time : 1s;
+
+// header
+.header {
+	font-family: monospace;
+}
+// infoCard
+.info-card {
+	position: absolute;
+	height: $height;
+	width: calc($width * 2);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+// avatar
+
+.avatar-container {
+	position: absolute;
+	height: $height;
+	width: $width;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.avatar-bg-layer-template {
+	position: absolute;
+	height: $height;
+	width: $width;
+}
+
+.layer-1 {
+	animation-name: layer-1-animation;
+	animation-duration: $animation-time;
+	animation-fill-mode: forwards;
+	z-index: -1;
+}
+
+.layer-2 {
+	animation-name: layer-2-animation;
+	animation-duration: $animation-time;
+	animation-fill-mode: forwards;
+	z-index: -2;
+
+	// animation-delay: 2s;
+}
+.layer-3 {
+	animation-name: layer-3-animation;
+	animation-duration: $animation-time;
+	animation-fill-mode: forwards;
+	z-index: -3;
+
+	// animation-delay: 4s;
+}
+
+@keyframes layer-1-animation {
+	from {
+		background-color: inherit;
+		transform: translate(0px, 0px);
+	}
+	to {
+		background-color: lightblue;
+		transform: translate(10px, 10px);
+	}
+}
+@keyframes layer-2-animation {
+	from {
+		background-color: inherit;
+		transform: translate(0px, 0px);
+	}
+	to {
+		background-color: lightgreen;
+		transform: translate(20px, 20px);
+	}
+}
+@keyframes layer-3-animation {
+	from {
+		background-color: inherit;
+		transform: translate(0px, 0px);
+	}
+	to {
+		background-color: lightcoral;
+		transform: translate(30px, 30px);
+	}
+}
